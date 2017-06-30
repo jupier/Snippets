@@ -1,0 +1,5 @@
+exec(exec(<<calltoservice>>).check(bodyString.saveAs("RESPONSE_DATA")))
+.exec(session ⇒ {
+    println(">>>RESPONSE_DATA<<<" + session("RESPONSE_DATA").as[String])
+    session
+})
